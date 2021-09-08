@@ -147,8 +147,8 @@ main .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-grid-columns: 27% 38% 27%;
-      grid-template-columns: 27% 38% 27%;
+  -ms-grid-columns: 27% 43% 27%;
+      grid-template-columns: 27% 43% 27%;
 }
 
 main .left-side {
@@ -237,8 +237,82 @@ main .left-side .shortcut-links a img {
 }
 
 main .middle-content {
-  background: #fff;
   height: 1000px;
+}
+
+main .middle-content .storys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .middle-content .storys .story {
+  -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .middle-content .storys .story .bg-transparent {
+  background: rgba(44, 44, 44, 0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+main .middle-content .storys .story .story-img {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+main .middle-content .storys .story p {
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .middle-content .storys .story .story-profile {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  top: 5%;
+  left: 5%;
+  border: 3px solid #7C83FD;
+}
+
+main .middle-content .storys .story .upload-icon {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .middle-content .storys .story:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 main .right-side {
@@ -354,9 +428,60 @@ main .right-side .events .event-info a {
   color: #7C83FD;
 }
 
+main .right-side .advertisment {
+  margin-bottom: 3em;
+}
+
 main .right-side .advertisment img {
   width: 100%;
   border-radius: 4px;
+}
+
+main .right-side .conversation .persons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.3em;
+}
+
+main .right-side .conversation .persons .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .right-side .conversation .persons .person .profile {
+  position: relative;
+}
+
+main .right-side .conversation .persons .person .profile .profile-pic {
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 50%;
+}
+
+main .right-side .conversation .persons .person .profile .online {
+  position: absolute;
+  top: unset;
+  right: 0;
+  bottom: 3px;
+  background: #8ec74c;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+main .right-side .conversation .persons .person span {
+  font-size: 1.1rem;
+  padding-left: 1em;
 }
 
 .display-hide {
